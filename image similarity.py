@@ -12,15 +12,15 @@ picture1 = operation.imread('C:/../images/image1.jpg')
 picture2 = operation.imread('C:/../images/image2.jpg')
 picture3 = operation.imread('C:/../images/image3.jpg')
 
-#calculate the histogram for each image
+#measuring histogram for each image
 histogram1 = operation.calcHist([picture1], [0], None, [256], [0, 255])
 histogram2 = operation.calcHist([picture2], [0], None, [256], [0, 255])
 histogram3 = operation.calcHist([picture3], [0], None, [256], [0, 255])
 
-#calculating similarity rate (based on histogram)
-#similarity rate (between image 1 and 3) 
+#similarity measure (based on histogram)
+#similarity measure (between image 1 and 3) 
 sim1 = operation.compareHist(histogram1, histogram3, operation.HISTCMP_INTERSECT)
-#similarity rate (between image 2 and 3) 
+#similarity measure (between image 2 and 3) 
 sim2 = operation.compareHist(histogram2, histogram3, operation.HISTCMP_INTERSECT)
 
 print('Similarity rate (Image 1 & 3) ', sim1)
